@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-08T16:03:19+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Aeneas, a Verification Framework for Rust</title><entry><title type="html">Aeneas-news: January 2025</title><link href="http://localhost:4000/newsletter/2025/01/07/aeneas-newsletter.html" rel="alternate" type="text/html" title="Aeneas-news: January 2025" /><published>2025-01-07T11:13:29+01:00</published><updated>2025-01-07T11:13:29+01:00</updated><id>http://localhost:4000/newsletter/2025/01/07/aeneas-newsletter</id><content type="html" xml:base="http://localhost:4000/newsletter/2025/01/07/aeneas-newsletter.html"><![CDATA[<p>A very short update to open the new year, since development slowed down in December for the holidays. We wish everyone a happy 2025!</p>
+
+<h2 id="general--roadmap">General + roadmap:</h2>
+<ul>
+  <li>Son Ho successfully defended his PhD. Congratulations, Son!</li>
+  <li>2025 goal: a website for the whole project, with a blog to better communicate with our users, proper pointers to documentation, etc.</li>
+  <li>2025 goal: official alpha release of Charon (see our <a href="https://arxiv.org/abs/2410.18042">preprint</a>)</li>
+</ul>
+
+<h2 id="charon-rust-compiler-driver">Charon (Rust compiler driver):</h2>
+<ul>
+  <li>charon-lib no longer depends on rustc internals, meaning charon now builds like a normal crate (although it still requires a nightly compiler toolchain)</li>
+  <li>lots of groundwork to prepare upcoming features, such as an enhanced representation of binders in types in order to support associated types</li>
+  <li>fixes to control-flow reconstruction</li>
+</ul>
+
+<h2 id="aeneas-rust-verification">Aeneas (Rust verification):</h2>
+<ul>
+  <li>support for borrows within ADTs</li>
+  <li>improvements to error messages</li>
+</ul>
+
+<h2 id="eurydice-rust-to-c-compiler">Eurydice (Rust to C compiler):</h2>
+<ul>
+  <li>support for associated constants</li>
+  <li>honor custom values for enums</li>
+  <li>peephole optimizations to generate better-quality code, notably around loops</li>
+  <li>support for struct-tuples</li>
+  <li>numerous bugfixes</li>
+</ul>]]></content><author><name></name></author><category term="newsletter" /><summary type="html"><![CDATA[A very short update to open the new year, since development slowed down in December for the holidays. We wish everyone a happy 2025!]]></summary></entry><entry><title type="html">Aeneas-news: December 2024</title><link href="http://localhost:4000/newsletter/2024/12/02/aeneas-newsletter.html" rel="alternate" type="text/html" title="Aeneas-news: December 2024" /><published>2024-12-02T14:43:29+01:00</published><updated>2024-12-02T14:43:29+01:00</updated><id>http://localhost:4000/newsletter/2024/12/02/aeneas-newsletter</id><content type="html" xml:base="http://localhost:4000/newsletter/2024/12/02/aeneas-newsletter.html"><![CDATA[<p>New year’s resolution, early! We will be posting monthly updates on the Aeneas project at large, to better communicate with our users, share key parts of our roadmap, and generally gather feedback and thoughts on where the project is headed.</p>
+
+<h2 id="charon-rust-compiler-driver">Charon (Rust compiler driver)</h2>
+<p>Most of the recent action happened on Charon, where we added tons of support for new Rust features. In addition to paving the way for a wider support of Rust in Aeneas, we also expect this to be valuable independently of Aeneas, e.g., to develop novel tools and analyses for Rust. Highlights include:</p>
+<ul>
+  <li>Support for quantified clauses</li>
+  <li>Support for unsafe code</li>
+  <li>Support for type aliases</li>
+  <li>Better error handling for unsupported features</li>
+  <li>Performance improvements, particularly for code using typenum</li>
+  <li>Usability improvements, e.g., preserving Rust comments throughout Charon</li>
+</ul>
+
+<p>This streak of work culminated in a paper submission currently on arXiv. With these additions, we are now able to successfully run Charon on many existing Rust crates.</p>
+
+<p>Our plan is to stabilize features in Charon, and continue to make the tool generally useful (we heard of potentially more interested users).</p>
+
+<h2 id="eurydice-rust-to-c-compiler">Eurydice (Rust to C compiler)</h2>
+<p>Eurydice consumes the output of Charon and provides an escape hatch for people who want to author Rust, and get memory safety (and possibly verification with Aeneas), while still needing to produce C. Eurydice was recently used to extract libcrux’s <a href="https://github.com/cryspen/libcrux/tree/main/libcrux-ml-kem/c">ML-KEM implementation</a>, developed by <a href="https://cryspen.com/">Cryspen</a>. This C code has now made it into Google’s BoringSSL, Mozilla Firefox, OpenSSH, and more.</p>
+
+<p>Recent improvements include bugfixes, improved support for traits, retaining inline comments, and more.</p>
+
+<p>The plan is to continue to develop features in Eurydice as needed by downstream consumers; for now, libcrux is the chief user of Eurydice, and we expect more work to happen on libcrux starts extracting their ML-DSA implementation to C via Eurydice, too.</p>
+
+<h2 id="aeneas-rust-verification">Aeneas (Rust verification)</h2>
+<p>Aeneas is the chief consumer of Charon, and allows verifying Rust programs via a functional translation. The past several months have been busy with Son (main developer of Aeneas) writing his PhD dissertation, doing tutorials, and generally working on Charon to lay the groundwork for more features in Aeneas.</p>
+
+<p>A list of improvements have still made it into Aeneas, with the following highlights:</p>
+<ul>
+  <li>An experimental -borrow-check attribute which allows borrow-checking code without generating a pure model; doing so relaxes some constraints which are required by the pure translation</li>
+  <li>The use of implicit parameters in the generated code whenever possible</li>
+  <li>Backward functions now can’t fail (they don’t use the Result type)</li>
+  <li>More definitions in the standard libraries for the different backends</li>
+  <li>Bug fixes and improvements for scalar_tac and the progress tactics in Lean, which include the scalar_tac attribute to indicate theorems which have to be automatically applied byscalar_tac</li>
+  <li>Various bug fixes and improvements of the generated output</li>
+</ul>
+
+<p>Son recently joined Microsoft Azure Research, with a mandate to work on verifying Microsoft code with Aeneas, using the Lean backend. Expect to see numerous tooling improvements landing at a rapid clip as the (friendly) pressure builds up on Aeneas to support more features. It goes without saying that the entirety of the tooling will remain open-source.</p>
+
+<p>That’s it for now, we are happy to engage the <a href="https://aeneas-verif.zulipchat.com/">Aeneas Zulip</a>, and we will be using Zulip as the main communication channel for future updates!</p>]]></content><author><name></name></author><category term="newsletter" /><summary type="html"><![CDATA[New year’s resolution, early! We will be posting monthly updates on the Aeneas project at large, to better communicate with our users, share key parts of our roadmap, and generally gather feedback and thoughts on where the project is headed.]]></summary></entry></feed>
