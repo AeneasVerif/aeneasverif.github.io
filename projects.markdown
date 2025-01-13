@@ -16,7 +16,7 @@ is implemented as a custom driver for the rustc compiler.
 
 Charon operates on MIR, one of the intermediate representations of the rustc
 compiler. Charon converts MIR code to ULLBC (Unstructured Low-Level Borrow
-Calculus), a slightly simplified, verification-oriented representation of MIR.
+Calculus), a slightly simplified, analysis-oriented representation of MIR.
 It then performs control-flow reconstruction to translate ULLBC to LLBC
 (Low-Level Borrow Calculus). While Charon is implemented in Rust, it includes
 JSON serializers for both ULLBC and LLBC, enabling the development of Rust
@@ -31,7 +31,7 @@ Rust programs. It relies on a translation from Charon's LLBC language to a
 pure, functional model, and supports several verification backends, including
 [F\*](https://www.fstar-lang.org), [Coq](https://coq.inria.fr/),
 [HOL4](https://hol-theorem-prover.org/) and
-[Lean](https://leanprover.github.io/). 
+[Lean](https://leanprover.github.io/).
 Aeneas currently targets a *safe*, sequential Rust code. See the [Aeneas
 README](https://github.com/AeneasVerif/aeneas?tab=readme-ov-file#targeted-subset-and-current-limitations)
 for more details about the Rust subset currently supported!
