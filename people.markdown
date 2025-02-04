@@ -9,6 +9,7 @@ permalink: /people/
 * [Jonathan Protzenko](jonathan.protzenko.fr), Microsoft Research Azure
 * [Guillaume Boisseau](https://github.com/Nadrieril), Inria
 * [Yoann Prak](https://github.com/EschericHya), Inria
+* [Fernando Leal](https://f.leal.sh/), Inria
 
 ### Alumni:
 * [Sidney Congard](https://dwarfobserver.github.io/), M2 intern, Inria
