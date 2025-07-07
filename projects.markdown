@@ -45,7 +45,7 @@ on using Lean for verifying Rust programs translated by Aeneas.
 
 ## Eurydice
 
-Eurydice is a compiler from (a subset of) Rust to C. The purpose of Eurydice is to provide a
+[Eurydice](https://github.com/AeneasVerif/eurydice) is a compiler from (a subset of) Rust to C. The purpose of Eurydice is to provide a
 backwards-compatibility story as the verification ecosystem gradually
 transitions to Rust. New programs can be written in Rust, in turn making them
 safer and easier to verify; but for legacy environments that cannot yet take a
@@ -64,4 +64,22 @@ type-driven translation. Once in the KaRaMeL AST, 30+ nano-passes allow going
 from Rust down to C code. About half of these passes were already implemented
 for KaRaMeL, the rest of the passes reuse the KaRaMeL infrastructure but were
 freshly written for Eurydice.
+
+## Scylla
+
+[Scylla](https://github.com/AeneasVerif/scylla) is a tool for translating highly regular C code to safe Rust. The goal
+of Scylla is to help with the transition from legacy C code to Rust projects.
+To benefit from the infrastructure in C projects (CI, regression and performance
+testing), users are expected to progressively rewrite their C code until
+it fits the C subset supported by Scylla.
+
+Scylla relies on the Clang frontend to parse C code before translating it to Rust.
+Additionally, users can provide annotations in the C source code to, e.g., specify
+that a tagged union should be translated to a Rust abstract datatype, or that a
+C struct should be translated to a Rust tuple.
+
+As of July 2025, Scylla is able to translate parts of the HACL\* and SymCrypt
+cryptographic libraries, as well as the CBOR binary parser from EverParse, and
+the core compression algorithm of bzip2, all of them requiring different levels
+of manual C source rewritings and annotations.
 
