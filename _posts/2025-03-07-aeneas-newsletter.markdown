@@ -37,7 +37,7 @@ several range definitions (which can be used with the syntax for ... in ...) tog
 * Do not hide translation failures anymore, and error out cleanly if something isn't supported (rather than silently generate no code)
 
 ## Scylla
-A new projet, Scylla, is now public! https://github.com/AeneasVerif/scylla
+A new projet, [Scylla](https://github.com/AeneasVerif/scylla), is now public!
 
 Scylla aims to translate very regular, data-oriented C code to safe Rust. The ambition is that the programmer should be actively involved in rewriting their C code until it is regular and understandable enough to become eligible to a translation to Safe Rust. This approach allows running performance benchmarks, regression, integration and unit tests in the same original C build environment. Once the programmer is confident that the rewrites introduced no errors, they can invoke Scylla to get clean, idiomatic Rust code with no unsafe blocks.
 

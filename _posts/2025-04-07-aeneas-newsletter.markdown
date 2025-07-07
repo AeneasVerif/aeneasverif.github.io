@@ -9,11 +9,12 @@ A brief update on what's happening in the Aeneas project at large.
 ## Charon
 * The README has been updated. It's now a good reflection of where the project is at and where we plan to go;
 * Thanks to the welcome help of @Vague, Charon now works on Windows;
-* Thanks again to @Vague, the cli interface of Charon was modernized and cleaner up. We've replaced:
+* Thanks again to @Vague, the cli interface of Charon was modernized and cleaner up.
+  The old options are still available but will soon be deprecated.
+  We've replaced:
     - charon [OPTIONS] becomes charon cargo [OPTIONS] [-- CARGO_OPTIONS];
     - charon --no-cargo [OPTIONS] becomes charon rustc [OPTIONS] [-- RUSTC_OPTIONS];
     - charon --read-llbc <path> becomes charon pretty-print <path>.
-    The old options are still available but will soon be deprecated.
 * The --no-cargo --crate <name> option was removed because it behaved inconsistently; use --rustc-arg=--crate-name=<name> instead;
 * Charon now translates the lang_item identifier for built-in definitions. This makes it easier to recognize a number of built-ins like Box, String, Copy, etc;
 * Progress is ongoing towards supporting later MIRs (https://github.com/AeneasVerif/charon/issues/543).
@@ -21,11 +22,11 @@ A brief update on what's happening in the Aeneas project at large.
 ## Aeneas
 * the progress_pure and progress_pure_def attributes allow automatically lifting theorems and generating theorems from definitions so that progress can use them
 * several new tactics: zmodify (to convert propositions so that they manipulate elements of ZMod), simp_lists (to simplify expressions like List.get (List.set ...) - it uses scalar_tac to discharge the proof obligations), simp_ifs (to simplify if then else expressions by using scalar_tac)
-* thanks to the work of Fernando Leal, a new progress* tactic allows repeatedly applying
-split and progress, while its variant progress*? generates the corresponding proof
-script. progress*, progress*? and progress can now use the keyword by to use a
+* thanks to the work of Fernando Leal, a new progress\* tactic allows repeatedly applying
+split and progress, while its variant progress\*? generates the corresponding proof
+script. progress\*, progress\*? and progress can now use the keyword by to use a
 custom discharger for the preconditions. A new syntax is also possible for progress:
-let* ⟨ ... ⟩ ← THM_NAME (with variants: let* ⟨ b, b_post ⟩ ← * and let* ⟨ b, b_post ⟩ ← *?).
+let\* ⟨ ... ⟩ ← THM_NAME (with variants: let\* ⟨ b, b_post ⟩ ← \* and let\* ⟨ b, b_post ⟩ ← \*?).
 * simp procedures for elements of ZMod (that we intend to port to Mathlib), which simplify
 constants ((17 : ZMod 12) ~> (5 : ZMod 12)), inverses ((12⁻¹ : ZMod 7) ~> (3 : ZMod
   7)) and powers (((2 ^ 16)⁻¹ : ZMod 3329) ~> (169 : ZMod 3329)).
