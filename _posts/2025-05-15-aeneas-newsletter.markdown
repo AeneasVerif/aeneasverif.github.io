@@ -6,10 +6,10 @@ categories: newsletter
 ---
 ## Charon
 * Significant progress on supporting later MIRs: most constant-related shanigans have been fixed;
-Added --mir elaborated which returns a MIR that includes drops. This works in common cases, open an issue if you encounter errors with this;
+* Added --mir elaborated which returns a MIR that includes drops. This works in common cases, open an issue if you encounter errors with this;
 * Progress towards better support for closures, thanks in particular to @Opale;
 * Added --start-from <name> to extract the given item instead of the whole current crate;
-@Opale added an experimental --monomorphize flag that monomorphizes the whole contents of the crate;
+* @Opale added an experimental --monomorphize flag that monomorphizes the whole contents of the crate;
 * Upgraded the rustc used to build charon to a recent version.
 
 ## Aeneas
