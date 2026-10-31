@@ -1,32 +1,32 @@
 // Import before Minima so its built-in styles use this palette too.
-$brand-color: #147D52;
+$brand-color: #102A43;
 $text-color: #111;
-$background-color: #fdfdfd;
+$background-color: #fff;
 $grey-color: #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark: darken($grey-color, 25%);
 
-$accent-color: $brand-color;
-$button-hover-color: #0D5238;
+$accent-color: #B78119;
+$button-hover-color: lighten($brand-color, 7%);
 $button-text-color: #fff;
-$heading-color: #172b4d;
+$heading-color: $brand-color;
 $copy-color: #4e5d70;
 $header-background-color: $brand-color;
 $header-border-color: $brand-color;
 $header-text-color: $button-text-color;
 $nav-text-color: $header-text-color;
-$nav-active-text-color: $nav-text-color;
+$nav-active-text-color: mix($accent-color, $button-text-color, 80%);
 $surface-color: mix($brand-color, $background-color, 94%);
-$border-color: $nav-text-color;
-$active-surface-color: $button-hover-color;
+$border-color: mix($brand-color, $background-color, 55%);
+$active-surface-color: $brand-color;
 $active-border-color: $nav-active-text-color;
 $secondary-button-hover-color: mix($brand-color, $background-color, 6%);
 $grid-color: rgba($brand-color, 0.13);
 $mask-color: #000;
 
 $gear-primary-color: $brand-color;
-$gear-secondary-color: #75BB98;
-$gear-tertiary-color: $button-hover-color;
+$gear-secondary-color: #7891AC;
+$gear-tertiary-color: $accent-color;
 $gear-fill-alpha: 18; // 0 (transparent) to 255 (opaque).
 
 $code-background-color: #eef;
