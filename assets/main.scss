@@ -29,6 +29,43 @@
   .site-nav {
     float: none;
     line-height: 1.5;
+
+    .page-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      background: #f2f5fa;
+      color: #334155;
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+
+      &:visited {
+        color: #334155;
+      }
+
+      &:hover {
+        border-color: #c7d8f7;
+        background: #eaf1ff;
+        color: #2a67d4;
+        text-decoration: none;
+      }
+
+      &[aria-current="page"] {
+        border-color: #c7d8f7;
+        background: #eaf1ff;
+        color: #2a67d4;
+      }
+
+      &:focus-visible {
+        outline: 2px solid #2a67d4;
+        outline-offset: 3px;
+      }
+    }
   }
 }
 
@@ -197,9 +234,10 @@
   @media screen and (min-width: 601px) and (max-width: 700px) {
     .site-header .site-nav .page-link {
       font-size: 14px;
+      padding: 6px 8px;
 
       &:not(:last-child) {
-        margin-right: 12px;
+        margin-right: 6px;
       }
     }
   }
@@ -207,6 +245,15 @@
   @media screen and (max-width: 600px) {
     .site-header .site-nav {
       top: 13px;
+
+      .page-link {
+        display: block;
+        margin: 4px 8px;
+
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
     }
   }
 
