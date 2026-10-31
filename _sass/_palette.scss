@@ -7,22 +7,26 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark: darken($grey-color, 25%);
 
 $accent-color: $brand-color;
-$accent-hover-color: #0D5238;
+$button-hover-color: #0D5238;
 $button-text-color: #fff;
 $heading-color: #172b4d;
 $copy-color: #4e5d70;
-$nav-text-color: #334155;
-$surface-color: mix($accent-color, $background-color, 4%);
-$border-color: mix($accent-color, $background-color, 18%);
-$active-surface-color: mix($accent-color, $background-color, 8%);
-$active-border-color: mix($accent-color, $background-color, 30%);
-$secondary-button-hover-color: mix($accent-color, $background-color, 6%);
-$grid-color: rgba($accent-color, 0.13);
+$header-background-color: $brand-color;
+$header-border-color: $brand-color;
+$header-text-color: $button-text-color;
+$nav-text-color: $header-text-color;
+$nav-active-text-color: $nav-text-color;
+$surface-color: mix($brand-color, $background-color, 94%);
+$border-color: $nav-text-color;
+$active-surface-color: $button-hover-color;
+$active-border-color: $nav-active-text-color;
+$secondary-button-hover-color: mix($brand-color, $background-color, 6%);
+$grid-color: rgba($brand-color, 0.13);
 $mask-color: #000;
 
-$gear-primary-color: $accent-color;
+$gear-primary-color: $brand-color;
 $gear-secondary-color: #75BB98;
-$gear-tertiary-color: $accent-hover-color;
+$gear-tertiary-color: $button-hover-color;
 $gear-fill-alpha: 18; // 0 (transparent) to 255 (opaque).
 
 $code-background-color: #eef;
