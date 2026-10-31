@@ -4,9 +4,9 @@ title: People
 permalink: /people/
 ---
 
-* [Son Ho](https://www.sonho.fr), Microsoft Research Azure
+* [Son Ho](https://www.sonho.fr), Microsoft Azure Research
 * [Aymeric Fromherz](https://aymericfromherz.github.io), Inria
-* [Jonathan Protzenko](https://jonathan.protzenko.fr), Microsoft Research Azure
+* [Jonathan Protzenko](https://jonathan.protzenko.fr), Google
 * [Guillaume Boisseau](https://github.com/Nadrieril), Inria
 * [Oliver Butterley](https://github.com/oliver-butterley), Beneficial AI Foundation
 * [Matej Penciak](https://mpenciak.net), Beneficial AI Foundation
