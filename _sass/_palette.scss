@@ -1,0 +1,53 @@
+// Import before Minima so its built-in styles use this palette too.
+$brand-color: #2a7ae2;
+$text-color: #111;
+$background-color: #fdfdfd;
+$grey-color: #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
+
+$accent-color: #2a67d4;
+$accent-hover-color: #2258b7;
+$button-text-color: #fff;
+$heading-color: #172b4d;
+$copy-color: #4e5d70;
+$nav-text-color: #334155;
+$surface-color: #f2f5fa;
+$border-color: #e2e8f0;
+$active-surface-color: #eaf1ff;
+$active-border-color: #c7d8f7;
+$secondary-button-hover-color: #eef4ff;
+$grid-color: rgba($accent-color, 0.13);
+$mask-color: #000;
+
+$gear-primary-color: $accent-color;
+$gear-secondary-color: #7098e6;
+$gear-tertiary-color: #294e81;
+$gear-fill-alpha: 18; // 0 (transparent) to 255 (opaque).
+
+$code-background-color: #eef;
+$highlight-background-color: #fff;
+$code-comment-color: #998;
+$code-muted-color: #999;
+$code-output-color: #888;
+$code-subheading-color: #aaa;
+$code-error-color: #a61717;
+$code-error-background-color: #e3d2d2;
+$code-diagnostic-color: #a00;
+$code-diff-text-color: #000;
+$code-deleted-background-color: #fdd;
+$code-deleted-strong-background-color: #faa;
+$code-inserted-color: #009926;
+$code-inserted-background-color: #dfd;
+$code-inserted-strong-background-color: #afa;
+$code-number-color: #099;
+$code-string-color: #d14;
+$code-symbol-color: #990073;
+$code-entity-color: #800080;
+$code-type-color: #458;
+$code-name-color: #008080;
+$code-builtin-color: #0086B3;
+$code-function-color: #900;
+$code-prompt-color: #555;
+$code-tag-color: #000080;
+$code-whitespace-color: #bbb;

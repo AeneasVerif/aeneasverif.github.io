@@ -3,12 +3,15 @@
   const context = canvas.getContext("2d");
   if (!context) return;
 
+  const palette = getComputedStyle(canvas);
+  const gearColor = (name) => palette.getPropertyValue("--gear-" + name).trim();
+  const fillOpacity = Number(palette.getPropertyValue("--gear-fill-alpha")) / 255;
   const tau = 2 * Math.PI;
   const contactAngle = Math.atan2(120, 160);
   const gears = [
-    { x: 142, y: 144, teeth: 24, radius: 120, phase: contactAngle, color: "#2a67d4" },
-    { x: 302, y: 264, teeth: 16, radius: 80, phase: contactAngle - 3 * Math.PI / 16, color: "#7098e6" },
-    { x: 218, y: 376, teeth: 12, radius: 60, phase: contactAngle - Math.PI / 6, color: "#294e81" }
+    { x: 142, y: 144, teeth: 24, radius: 120, phase: contactAngle, color: gearColor("primary") },
+    { x: 302, y: 264, teeth: 16, radius: 80, phase: contactAngle - 3 * Math.PI / 16, color: gearColor("secondary") },
+    { x: 218, y: 376, teeth: 12, radius: 60, phase: contactAngle - Math.PI / 6, color: gearColor("tertiary") }
   ];
 
   function involute(radius, base) {
@@ -68,8 +71,10 @@
       const hole = gear.radius * 0.35;
       context.moveTo(gear.x + hole, gear.y);
       context.arc(gear.x, gear.y, hole, 0, tau);
-      context.fillStyle = gear.color + "12";
+      context.fillStyle = gear.color;
+      context.globalAlpha = fillOpacity;
       context.fill("evenodd");
+      context.globalAlpha = 1;
       context.strokeStyle = gear.color;
       context.lineWidth = 1.5;
       context.stroke();

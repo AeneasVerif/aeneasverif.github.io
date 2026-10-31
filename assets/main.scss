@@ -2,7 +2,117 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "minima";
+@import "palette", "minima";
+
+:root {
+  --gear-primary: #{$gear-primary-color};
+  --gear-secondary: #{$gear-secondary-color};
+  --gear-tertiary: #{$gear-tertiary-color};
+  --gear-fill-alpha: #{$gear-fill-alpha};
+}
+
+pre,
+code,
+.highlighter-rouge .highlight {
+  background-color: $code-background-color;
+}
+
+.highlight {
+  background-color: $highlight-background-color;
+
+  .c, .cm, .c1 {
+    color: $code-comment-color;
+  }
+
+  .cp, .cs, .gh, .bp {
+    color: $code-muted-color;
+  }
+
+  .go {
+    color: $code-output-color;
+  }
+
+  .gu {
+    color: $code-subheading-color;
+  }
+
+  .err {
+    color: $code-error-color;
+    background-color: $code-error-background-color;
+  }
+
+  .gd, .gd .x, .gi, .gi .x {
+    color: $code-diff-text-color;
+  }
+
+  .gd {
+    background-color: $code-deleted-background-color;
+  }
+
+  .gd .x {
+    background-color: $code-deleted-strong-background-color;
+  }
+
+  .gi {
+    background-color: $code-inserted-background-color;
+  }
+
+  .gi .x {
+    background-color: $code-inserted-strong-background-color;
+  }
+
+  .gr, .gt {
+    color: $code-diagnostic-color;
+  }
+
+  .gp, .nn {
+    color: $code-prompt-color;
+  }
+
+  .kt, .nc {
+    color: $code-type-color;
+  }
+
+  .m, .mf, .mh, .mi, .mo, .il {
+    color: $code-number-color;
+  }
+
+  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1 {
+    color: $code-string-color;
+  }
+
+  .ss {
+    color: $code-symbol-color;
+  }
+
+  .ni {
+    color: $code-entity-color;
+  }
+
+  .na, .no, .nv, .vc, .vg, .vi {
+    color: $code-name-color;
+  }
+
+  .nb {
+    color: $code-builtin-color;
+  }
+
+  .ne, .nf {
+    color: $code-function-color;
+  }
+
+  .nt {
+    color: $code-tag-color;
+  }
+
+  .sr {
+    color: $code-inserted-color;
+  }
+
+  .w {
+    color: $code-whitespace-color;
+  }
+}
 
 .site-header {
   .wrapper {
@@ -35,34 +145,34 @@
       align-items: center;
       justify-content: center;
       padding: 8px 12px;
-      border: 1px solid #e2e8f0;
+      border: 1px solid $border-color;
       border-radius: 6px;
-      background: #f2f5fa;
-      color: #334155;
+      background: $surface-color;
+      color: $nav-text-color;
 
       &:not(:last-child) {
         margin-right: 8px;
       }
 
       &:visited {
-        color: #334155;
+        color: $nav-text-color;
       }
 
       &:hover {
-        border-color: #c7d8f7;
-        background: #eaf1ff;
-        color: #2a67d4;
+        border-color: $active-border-color;
+        background: $active-surface-color;
+        color: $accent-color;
         text-decoration: none;
       }
 
       &[aria-current="page"] {
-        border-color: #c7d8f7;
-        background: #eaf1ff;
-        color: #2a67d4;
+        border-color: $active-border-color;
+        background: $active-surface-color;
+        color: $accent-color;
       }
 
       &:focus-visible {
-        outline: 2px solid #2a67d4;
+        outline: 2px solid $accent-color;
         outline-offset: 3px;
       }
     }
@@ -97,17 +207,17 @@
     z-index: -1;
     pointer-events: none;
     background-image:
-      linear-gradient(rgba(42, 103, 212, 0.13) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(42, 103, 212, 0.13) 1px, transparent 1px);
+      linear-gradient($grid-color 1px, transparent 1px),
+      linear-gradient(90deg, $grid-color 1px, transparent 1px);
     background-size: 56px 56px;
     background-position: center;
-    -webkit-mask-image: radial-gradient(ellipse at 60% 50%, #000, transparent 72%);
-    mask-image: radial-gradient(ellipse at 60% 50%, #000, transparent 72%);
+    -webkit-mask-image: radial-gradient(ellipse at 60% 50%, $mask-color, transparent 72%);
+    mask-image: radial-gradient(ellipse at 60% 50%, $mask-color, transparent 72%);
   }
 
   h1 {
     margin-bottom: 32px;
-    color: #172b4d;
+    color: $heading-color;
     font-size: 72px;
     font-weight: 700;
     line-height: 1.08;
@@ -115,13 +225,13 @@
 
     span {
       display: block;
-      color: #2a67d4;
+      color: $accent-color;
     }
   }
 }
 
 .home-hero__content {
-  color: #4e5d70;
+  color: $copy-color;
   font-size: 18px;
   line-height: 1.7;
 
@@ -143,41 +253,41 @@
   justify-content: center;
   min-width: 132px;
   padding: 12px 24px;
-  border: 2px solid #2a67d4;
+  border: 2px solid $accent-color;
   border-radius: 6px;
   box-sizing: border-box;
-  background: #2a67d4;
-  color: #fff;
+  background: $accent-color;
+  color: $button-text-color;
   font-weight: 600;
 
   &:visited {
-    color: #fff;
+    color: $button-text-color;
   }
 
   &:hover {
-    border-color: #2258b7;
-    background: #2258b7;
-    color: #fff;
+    border-color: $accent-hover-color;
+    background: $accent-hover-color;
+    color: $button-text-color;
     text-decoration: none;
   }
 
   &:focus-visible {
-    outline: 3px solid #172b4d;
+    outline: 3px solid $heading-color;
     outline-offset: 4px;
   }
 
   &--secondary {
-    background: #fdfdfd;
-    color: #2a67d4;
+    background: $background-color;
+    color: $accent-color;
 
     &:visited {
-      color: #2a67d4;
+      color: $accent-color;
     }
 
     &:hover {
-      border-color: #2a67d4;
-      background: #eef4ff;
-      color: #2a67d4;
+      border-color: $accent-color;
+      background: $secondary-button-hover-color;
+      color: $accent-color;
     }
   }
 }
@@ -227,8 +337,8 @@
     &::before {
       inset: 0;
       background-size: 40px 40px;
-      -webkit-mask-image: radial-gradient(ellipse at 50% 55%, #000, transparent 72%);
-      mask-image: radial-gradient(ellipse at 50% 55%, #000, transparent 72%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 55%, $mask-color, transparent 72%);
+      mask-image: radial-gradient(ellipse at 50% 55%, $mask-color, transparent 72%);
     }
 
     h1 {
