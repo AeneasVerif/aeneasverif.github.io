@@ -1,8 +1,19 @@
 ---
 layout: page
-title: Publications
+title: Publications & Posts
 permalink: /publications/
 ---
+
+## Blog posts
+
+* [A case study with Aeneas and jxl-rs](https://jonathan.protzenko.fr/2026/05/05/jxl-rs.html),
+  Jonathan Protzenko, _May 5, 2026_.
+* [An Overview of the Aeneas Rust Verification Toolchain](https://www.sonho.fr/2026/03/18/aeneas-overview.html),
+  Son Ho, _March 18, 2026_.
+* [Eurydice: a Rust to C compiler (yes)](https://jonathan.protzenko.fr/2025/10/28/eurydice.html),
+  Jonathan Protzenko, _October 28, 2025_.
+
+## Publications
 
 * [Scaling Verification of Cryptographic Software with Aeneas, Rust, and
   Lean](https://arxiv.org/abs/2609.15648v1), Son Ho, C&eacute;dric Fournet, Jonathan
