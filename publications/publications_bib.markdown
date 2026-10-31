@@ -1,16 +1,31 @@
 ---
 layout: default
 ---
+<a name="ho2026symcrypt"></a>
+```
+@misc{ho2026scaling,
+  title = {Scaling Verification of Cryptographic Software with Aeneas, Rust, and Lean},
+  author = {Son Ho and C{\'e}dric Fournet and Jonathan Protzenko and Michael Naehrig and Joshua Clune and Patrick Longa and Guillaume Boisseau and Fernando Leal S{\'a}nchez and Aymeric Fromherz and Antoine Delignat-Lavaud},
+  year = {2026},
+  eprint = {2609.15648},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CR},
+  url = {https://arxiv.org/abs/2609.15648v1}
+}
+```
+
 <a name="ho2024charon"></a>
 ```
-@misc{ho2024charon,
-      title={Charon: An Analysis Framework for Rust}, 
-      author={Son Ho and Guillaume Boisseau and Lucas Franceschino and Yoann Prak and Aymeric Fromherz and Jonathan Protzenko},
-      year={2024},
-      eprint={2410.18042},
-      archivePrefix={arXiv},
-      primaryClass={cs.PL},
-      url={https://arxiv.org/abs/2410.18042}, 
+@inproceedings{ho2025charon,
+  title = {Charon: An Analysis Framework for Rust},
+  author = {Son Ho and Guillaume Boisseau and Lucas Franceschino and Yoann Prak and Aymeric Fromherz and Jonathan Protzenko},
+  booktitle = {Computer Aided Verification},
+  year = {2025},
+  publisher = {Springer Nature Switzerland},
+  address = {Cham},
+  pages = {377--391},
+  doi = {10.1007/978-3-031-98685-7_18},
+  url = {https://doi.org/10.1007/978-3-031-98685-7_18}
 }
 ```
 
