@@ -29,6 +29,12 @@ title: Aeneas, a Verification Framework for Rust
 github_username: AeneasVerif
 zulip_username: aeneas-verif
 
+header_pages:
+  - projects.markdown
+  - publications.markdown
+  - in-the-news.markdown
+  - people.markdown
+
 # Build settings
 theme: minima
 plugins:
