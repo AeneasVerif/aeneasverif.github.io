@@ -29,6 +29,18 @@ layout: default
 }
 ```
 
+<a name="ho2024thesis"></a>
+```
+@phdthesis{ho2024thesis,
+  title = {Formal Verification of Rust Programs by Functional Translation},
+  author = {Ho, Son},
+  school = {Universit{\'e} PSL (Paris Sciences \& Lettres)},
+  year = {2024},
+  month = dec,
+  url = {https://theses.hal.science/tel-05004605}
+}
+```
+
 <a name="ho2024rust"></a>
 ```
 @article{ho2024rust,

@@ -26,6 +26,10 @@ permalink: /publications/
   Protzenko, _International Conference on Computer Aided Verification (CAV), 2025
   (tool paper)_.
   \[ [bib](publications_bib.html#ho2024charon) | [long version](https://arxiv.org/abs/2410.18042) \].
+* [Formal Verification of Rust Programs by Functional
+  Translation](https://theses.hal.science/tel-05004605), Son Ho,
+  _PhD thesis, Universit&eacute; PSL (Paris Sciences &amp; Lettres), 2024_.
+  \[ [bib](publications_bib.html#ho2024thesis) \].
 * [Sound Borrow-Checking for Rust via Symbolic
   Semantics](https://dl.acm.org/doi/10.1145/3674640), Son Ho, Aymeric Fromherz, Jonathan
   Protzenko, _International Conference on Functional Programming (ICFP), 2024_.
