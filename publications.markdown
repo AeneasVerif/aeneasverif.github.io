@@ -38,3 +38,23 @@ permalink: /publications/
   translation](https://dl.acm.org/doi/10.1145/3547647), Son Ho, Jonathan Protzenko,
   _International Conference on Functional Programming (ICFP), 2022_. 
   \[ [bib](publications_bib.html#ho2022aeneas) | [long version](https://arxiv.org/abs/2206.07185)\].
+
+{% if site.posts.size > 0 %}
+<h2 class="post-list-heading">News</h2>
+<ul class="post-list">
+  {%- for post in site.posts -%}
+  <li>
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <h3>
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+    </h3>
+    {%- if site.show_excerpts -%}
+      {{ post.excerpt }}
+    {%- endif -%}
+  </li>
+  {%- endfor -%}
+</ul>
+{% endif %}

@@ -6,9 +6,9 @@ permalink: /in-the-news/
 
 ## 2026
 
-- **31 Oct 2026** — AI Weekly, "[EasyProver nears saturation on Lean verification benchmarks](https://aiweekly.co/alerts/easyprover-nears-saturation-on-lean-verification-benchmarks)" (Aegis benchmark built with Aeneas)
+- **31 Oct 2026** — AI Weekly, "[EasyProver nears saturation on Lean verification benchmarks](https://aiweekly.co/alerts/easyprover-nears-saturation-on-lean-verification-benchmarks)"
 - **29 Oct 2026** — The Data Exchange podcast with Leo de Moura, "[When AI Writes the Code, Who Proves It Works?](https://thedataexchange.media/leo-de-moura-lean-aws/)"
-- **21 Oct 2026** — h5i, "[I Tried to Verify Popular Rust OSS with Lean 4, but Found Bugs Instead](https://h5i.dev/blog/finding-bugs-verifying-rust-oss/)" (Aeneas not named in this post; the framework post confirms the pipeline)
+- **21 Oct 2026** — h5i, "[I Tried to Verify Popular Rust OSS with Lean 4, but Found Bugs Instead](https://h5i.dev/blog/finding-bugs-verifying-rust-oss/)"
 - **15 Oct 2026** — Leo de Moura, "[Lean Now Ships with Verified Kernels](https://leodemoura.github.io/blog/2026-10-15-lean-now-ships-with-verified-kernels/)"
 - **29 Sep 2026** — hax blog, "[hax 0.4: easier to install and configure, and a new Lean backend](https://hax.cryspen.com/blog/2026/09/29/hax-04-easier-to-install-and-configure-and-a-new-lean-backend/)"
 - **Sep 2026** — arXiv 2609.15648, "[Scaling Verification of Cryptographic Software with Aeneas, Rust, and Lean](https://arxiv.org/abs/2609.15648)" (SymCrypt technical report)
