@@ -13,7 +13,9 @@
       </div>
     </main>
 
-    {%- include footer.html -%}
+    {%- unless page.layout == "home" -%}
+      {%- include footer.html -%}
+    {%- endunless -%}
 
   </body>
 

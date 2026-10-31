@@ -69,6 +69,12 @@
   }
 }
 
+.footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .home-hero {
   position: relative;
   left: 50%;
