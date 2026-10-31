@@ -16,5 +16,8 @@ permalink: /people/
 ### Alumni:
 * [Sidney Congard](https://dwarfobserver.github.io/), M2 intern, Inria
 * [Ryan Lahfa](ryan.lahfa.xyz), M2 intern, Inria
-* [Yoann Prak](https://github.com/EschericHya), Inria
-* [Fernando Leal](https://f.leal.sh/), Inria
+* [Yoann Prak](https://github.com/EschericHya), Research Engineer, Inria
+* [Fernando Leal](https://f.leal.sh/), M1 intern, Inria
+* [Remy Seassau](https://remyjck.github.io), PhD intern, Azure Research
+* [Mantas Baksys](https://mantasbaksys.github.io), PhD intern, Azure Research
+* [Cezar Andrici](https://cezarandrici.com), PhD intern, Azure Research
