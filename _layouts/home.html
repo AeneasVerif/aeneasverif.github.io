@@ -3,10 +3,16 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
+  <section class="home-hero" aria-labelledby="home-heading">
+    <div class="home-hero__copy">
+      <h1 id="home-heading">Scaling <span>Rust Verification</span></h1>
+      <div class="home-hero__content">
+        {{ content }}
+      </div>
+    </div>
+    <div class="home-hero__visual" aria-hidden="true">
+      <canvas id="hero-gears" width="420" height="470"></canvas>
+    </div>
+  </section>
 </div>
+<script src="{{ "/assets/hero-gears.js" | relative_url }}" defer></script>

@@ -13,4 +13,7 @@ proof assistants, including [F\*](https://www.fstar-lang.org),
 [Coq](https://coq.inria.fr/), [HOL4](https://hol-theorem-prover.org/) and
 [Lean](https://leanprover.github.io/).
 
-Read more about our work on the [Projects]({% link projects.markdown %}) page, or join us on [Zulip](https://aeneas-verif.zulipchat.com/)!
+<div class="home-hero__actions">
+  <a class="home-hero__button" href="https://github.com/AeneasVerif">Github</a>
+  <a class="home-hero__button home-hero__button--secondary" href="https://aeneas-verif.zulipchat.com/">Zulip</a>
+</div>
