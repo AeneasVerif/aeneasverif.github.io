@@ -12,7 +12,10 @@ toolchain to verify Rust programs to functional models in a variety of
 proof assistants, with [Lean](https://leanprover.github.io/) as its main backend.
 
 <div class="home-hero__actions">
-  <a class="home-hero__button" href="{{ "/roadmap/" | relative_url }}">Roadmap</a>
-  <a class="home-hero__button home-hero__button--secondary" href="https://github.com/AeneasVerif">Github</a>
-  <a class="home-hero__button" href="https://aeneas-verif.zulipchat.com/">Zulip</a>
+  {% assign roadmap_page = site.pages | where: "path", "roadmap.markdown" | first %}
+  {% if roadmap_page %}
+  <a class="home-hero__button" href="{{ roadmap_page.url | relative_url }}">Roadmap</a>
+  {% endif %}
+  <a class="home-hero__button{% if roadmap_page %} home-hero__button--secondary{% endif %}" href="https://github.com/AeneasVerif">Github</a>
+  <a class="home-hero__button{% unless roadmap_page %} home-hero__button--secondary{% endunless %}" href="https://aeneas-verif.zulipchat.com/">Zulip</a>
 </div>
