@@ -2,6 +2,8 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+$on-palm: 850px;
+
 @import "palette", "minima";
 
 :root {
@@ -115,6 +117,8 @@ code,
 }
 
 .site-header {
+  z-index: 1;
+
   .wrapper {
     display: flex;
     align-items: center;
@@ -183,6 +187,71 @@ code,
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.roadmap {
+  position: relative;
+  left: 50%;
+  width: calc(100vw - 64px);
+  max-width: 1160px;
+  transform: translateX(-50%);
+}
+
+.roadmap__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 64px;
+  padding: 48px 0;
+  border-top: 1px solid $grey-color-light;
+
+  &:nth-of-type(even) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+
+    .roadmap__text {
+      order: 1;
+    }
+  }
+}
+
+.roadmap__text {
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.roadmap__illustration {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  justify-self: center;
+  color: $gear-primary-color;
+}
+
+.roadmap__illustration--light {
+  color: $gear-secondary-color;
+  stroke: currentColor;
+}
+
+.roadmap__illustration--dark {
+  color: $gear-tertiary-color;
+  stroke: currentColor;
+}
+
+.roadmap__shape {
+  fill: currentColor;
+  fill-opacity: $gear-fill-alpha / 255;
+}
+
+.roadmap__node {
+  fill: $background-color;
 }
 
 .home-hero {
@@ -315,6 +384,21 @@ code,
   }
 }
 
+@media screen and (max-width: 850px) {
+  .site-header .site-nav {
+    top: 13px;
+
+    .page-link {
+      display: block;
+      margin: 4px 8px;
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 700px) {
   .site-header {
     .wrapper {
@@ -347,28 +431,20 @@ code,
     }
   }
 
-  @media screen and (min-width: 601px) and (max-width: 700px) {
-    .site-header .site-nav .page-link {
-      font-size: 14px;
-      padding: 6px 8px;
-
-      &:not(:last-child) {
-        margin-right: 6px;
-      }
-    }
+  .roadmap {
+    width: calc(100vw - 40px);
   }
 
-  @media screen and (max-width: 600px) {
-    .site-header .site-nav {
-      top: 13px;
+  .roadmap__item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 32px 0;
 
-      .page-link {
-        display: block;
-        margin: 4px 8px;
+    &:nth-of-type(even) {
+      grid-template-columns: minmax(0, 1fr);
 
-        &:not(:last-child) {
-          margin-right: 8px;
-        }
+      .roadmap__text {
+        order: 0;
       }
     }
   }

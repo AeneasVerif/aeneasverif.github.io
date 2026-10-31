@@ -30,6 +30,7 @@ github_username: AeneasVerif
 zulip_username: aeneas-verif
 
 header_pages:
+  - roadmap.markdown
   - projects.markdown
   - publications.markdown
   - in-the-news.markdown
