@@ -13,6 +13,10 @@ Between the end of July 2025 and the end of October 2026, Aeneas grew from about
 
 ![Lines of code at the end of each month for Aeneas and Charon]({{ "/assets/newsletter/2026-11/lines-of-code.svg" | relative_url }})
 
+Over the same period, Aeneas went from 365 to 885 merged pull requests and from 98 to 220 closed issues, and Charon from 530 to 1,040 merged pull requests and from 182 to 401 closed issues.
+
+![Cumulative issues closed and pull requests merged for Aeneas and Charon]({{ "/assets/newsletter/2026-11/issues-and-prs.svg" | relative_url }})
+
 Aeneas has also been used to verify more and more projects, including: 
 - Microsoft's Rust cryptography in [SymCrypt](https://www.microsoft.com/en-us/research/blog/verifying-rust-cryptography-in-symcrypt-from-standards-to-code/), 
 - The Signal protocol and its Rust implementation ([Signal Shot](https://leodemoura.github.io/blog/2026-4-20-signal-shot-the-platform-is-ready/)),
